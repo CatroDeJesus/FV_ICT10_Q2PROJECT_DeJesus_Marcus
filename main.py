@@ -1,28 +1,35 @@
-from pyscript import document, display
+from pyscript import document,display
 
 
-#list of members
-club_members = ["Joaquin Hizon", "Eron Almiron", "Jeff De Jesus","Cassandra De Jesus","Sebastian Stan"]
+nonmetals= {"H": ("Hydrogen", 1, 1.008),
+            "He": ("Helium", 2, 4.003),
+            "C": ("Carbon", 6, 12.011),
+            "N": ("Nitrogen", 7, 14.007),
+            "O": ("Oxygen", 8, 15.999),
+            "F": ("Fluorine", 9, 18.998),
+            "Ne": ("Neon", 10, 20.180),
+            "P": ("Phosphorus", 15, 30.974),
+            "S": ("Sulfur", 16, 32.06),
+            "Cl": ("Chlorine", 17, 35.45),
+            "Ar": ("Argon", 18, 39.948),
+            "Se": ("Selenium", 34, 78.971),
+            "Br": ("Bromine", 35, 79.904),
+            "Kr": ("Krypton", 36, 83.798),
+            "I": ("Iodine", 53, 126.90),
+            "Xe": ("Xenon", 54, 131.29),
+            "Rn": ("Radon", 86, 222.02)
+            
+            }
+# assigning the element symbol, atomic number, and atomic mass for
 
-def whitelist(e):
-    
-    #clearing the previous result to display the new message 
-    document.getElementById("output").innerHTML = ""
-
-   
-    #getting the values
-    first_name = document.getElementById("firstname").value
-    last_name = document.getElementById("lastname").value
-    full_name = first_name + " " + last_name
-
-    #checking if inputted name is in the list
-    is_member = full_name in club_members
-
-
-    message = {
-        True: "Congratulations "+ full_name +"! You are part of the Varsity team.",
-        False: "Sorry "+ full_name +", your name is not on the list."
-    }
-
-
-    display(message[is_member], target="output")
+# function to search for a non-metal
+def search_nonmetal(e):  
+    # Get the value from the input field
+    Planet2 = document.getElementById("nonmetal1").value
+    # Retrieve information from dictionary
+    result = nonmetals.get(Planet2, ("Non-metal not found", "-", "-"))
+    # Display the result in HTML
+    # Non-metal code, Name, Atomic Number, Atomic Mass
+    document.getElementById("name").innerText = result[0]
+    document.getElementById("number").innerText = result[1]
+    document.getElementById("mass").innerText = result[2]
