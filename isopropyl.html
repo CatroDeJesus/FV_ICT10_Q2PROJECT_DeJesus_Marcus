@@ -10,6 +10,13 @@
     <script type="module" src="https://pyscript.net/releases/2026.7.3/core.js"></script>
 
     <style>
+
+        .navbar {
+            background-color: rgba(255, 163, 50);
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+        }
+        
+
         body {
             background-image: url('https://i.pinimg.com/736x/39/8d/73/398d732701eb854945885d25dc426d3c.jpg');
             background-size: cover;
@@ -21,7 +28,7 @@
         }
 
         #whitelist {
-            background-color: chocolate;
+            background-color: rgb(255, 163, 50);
             max-width: 567px;
             margin-top: 39px;
             border-radius: 20px;
@@ -58,11 +65,43 @@
             margin-top: 20px;
             color: rgb(66, 43, 2);
         }
-    </style>
+</style>
    
     <title>Basketball Varsity Club Manager</title>
 </head>
 <body>
+
+        <nav class="navbar navbar-expand-sm navbar-light">
+
+    <div class="container-fluid">
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="mynavbar">
+
+      <ul class="navbar-nav me-auto">
+
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">SW1</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="disinfectant.html">Skills Test</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="isopropyl.html">Drill 2</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="self.html">About Me</a>
+        </li>
+      </ul>
+
+    </div>
+
+  </div>
+</nav>
 
 <div class="container text-center mt-4">
     <h2 class="mb-3 fw-bold shadow-sm p-2 bg-white rounded d-inline-block px-4">Basketball Varsity Team</h2>
